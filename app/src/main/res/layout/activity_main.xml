@@ -10,6 +10,17 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="420dp"
+            android:layout_marginLeft="20dp"
+            android:text="El resultado es: ?"
+            android:textColor="@android:color/holo_purple"
+            android:textSize="30sp" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -69,15 +80,18 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/spnBlon"
                         android:layout_marginTop="40dp"
-                        android:hint="Cantidad a Convertir" />
+                        android:hint="Cantidad a Convertir"
+                        android:inputType="numberDecimal"/>
 
                     <Button
                         android:id="@+id/btnConvertirL"
-                        android:layout_width="match_parent"
+                        android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_below="@+id/txtCantidadL"
                         android:layout_marginTop="40dp"
-                        android:text="Convertir" />
+                        android:text="Convertir"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="30sp"/>
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -119,14 +133,17 @@
                         android:layout_marginTop="40dp"
                         android:hint="Cantidad a Convertir"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"/>
                     <Button
                         android:id="@+id/btnConvertirA"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
                         android:layout_below="@+id/txtCantidadA"
                         android:layout_marginTop="40dp"
                         android:text="Convertir"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_centerHorizontal="true"
+                        android:textSize="30sp"/>
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -168,14 +185,17 @@
                         android:layout_marginTop="40dp"
                         android:hint="Cantidad a Convertir"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"/>
                     <Button
                         android:id="@+id/btnConvertirM"
                         android:layout_below="@+id/txtCantidadM"
                         android:layout_marginTop="40dp"
                         android:text="Convertir"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="30sp"/>
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -217,14 +237,17 @@
                         android:layout_marginTop="40dp"
                         android:hint="Cantidad a Convertir"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"/>
                     <Button
                         android:id="@+id/btnConvertirM1"
                         android:layout_below="@+id/txtCantidadM1"
                         android:layout_marginTop="40dp"
                         android:text="Convertir"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="30sp"/>
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -266,14 +289,17 @@
                         android:layout_marginTop="40dp"
                         android:hint="Cantidad a Convertir"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"/>
                     <Button
                         android:id="@+id/btnConvertirV"
                         android:layout_below="@+id/txtCantidadV"
                         android:layout_marginTop="40dp"
                         android:text="Convertir"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="30sp"/>
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -315,14 +341,17 @@
                         android:layout_marginTop="40dp"
                         android:hint="Cantidad a Convertir"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_height="wrap_content"
+                        android:inputType="numberDecimal"/>
                     <Button
                         android:id="@+id/btnConvertirT"
                         android:layout_below="@+id/txtCantidadT"
                         android:layout_marginTop="40dp"
                         android:text="Convertir"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"/>
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:textSize="30sp"/>
                 </RelativeLayout>
 
             </FrameLayout>

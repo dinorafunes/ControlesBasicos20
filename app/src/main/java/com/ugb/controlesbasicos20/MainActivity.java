@@ -46,6 +46,8 @@ public class MainActivity extends AppCompatActivity {
         btn4 = findViewById(R.id.btnConvertirV);
         btn5 = findViewById(R.id.btnConvertirT);
 
+        TextView textViewResultado = findViewById(R.id.result);
+
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -56,10 +58,11 @@ public class MainActivity extends AppCompatActivity {
                 int a = spn.getSelectedItemPosition();
 
                 tempVal = findViewById(R.id.txtCantidadL);
-                double cantidad = Double.parseDouble(tempVal.getText().toString());
+                double cantidad = obtenerCantidadValidada((EditText) tempVal);
 
                 double resp = miObj.convertir(0, de, a, cantidad);
                 Toast.makeText(getApplicationContext(), "Respuesta: " + resp, Toast.LENGTH_LONG).show();
+                textViewResultado.setText("El resultado es: " + resp);
             }
         });
         btn1.setOnClickListener(new View.OnClickListener() {
@@ -72,10 +75,11 @@ public class MainActivity extends AppCompatActivity {
                 int a = spn.getSelectedItemPosition();
 
                 tempVal = findViewById(R.id.txtCantidadM);
-                double cantidad = Double.parseDouble(tempVal.getText().toString());
+                double cantidad = obtenerCantidadValidada((EditText) tempVal);
 
                 double resp = miObj.convertir1(0, de, a, cantidad);
                 Toast.makeText(getApplicationContext(), "Respuesta: " + resp, Toast.LENGTH_LONG).show();
+                textViewResultado.setText("El resultado es: " + resp);
             }
         });
         btn2.setOnClickListener(new View.OnClickListener() {
@@ -88,10 +92,11 @@ public class MainActivity extends AppCompatActivity {
                 int a = spn.getSelectedItemPosition();
 
                 tempVal = findViewById(R.id.txtCantidadA);
-                double cantidad = Double.parseDouble(tempVal.getText().toString());
+                double cantidad = obtenerCantidadValidada((EditText) tempVal);
 
                 double resp = miObj.convertir2(0, de, a, cantidad);
                 Toast.makeText(getApplicationContext(), "Respuesta: " + resp, Toast.LENGTH_LONG).show();
+                textViewResultado.setText("El resultado es: " + resp);
             }
         });
         btn3.setOnClickListener(new View.OnClickListener() {
@@ -104,10 +109,11 @@ public class MainActivity extends AppCompatActivity {
                 int a = spn.getSelectedItemPosition();
 
                 tempVal = findViewById(R.id.txtCantidadM1);
-                double cantidad = Double.parseDouble(tempVal.getText().toString());
+                double cantidad = obtenerCantidadValidada((EditText) tempVal);
 
                 double resp = miObj.convertir3(0, de, a, cantidad);
                 Toast.makeText(getApplicationContext(), "Respuesta: " + resp, Toast.LENGTH_LONG).show();
+                textViewResultado.setText("El resultado es: " + resp);
             }
         });
         btn4.setOnClickListener(new View.OnClickListener() {
@@ -120,10 +126,11 @@ public class MainActivity extends AppCompatActivity {
                 int a = spn.getSelectedItemPosition();
 
                 tempVal = findViewById(R.id.txtCantidadV);
-                double cantidad = Double.parseDouble(tempVal.getText().toString());
+                double cantidad = obtenerCantidadValidada((EditText) tempVal);
 
                 double resp = miObj.convertir4(0, de, a, cantidad);
                 Toast.makeText(getApplicationContext(), "Respuesta: " + resp, Toast.LENGTH_LONG).show();
+                textViewResultado.setText("El resultado es: " + resp);
             }
         });
         btn5.setOnClickListener(new View.OnClickListener() {
@@ -136,12 +143,21 @@ public class MainActivity extends AppCompatActivity {
                 int a = spn.getSelectedItemPosition();
 
                 tempVal = findViewById(R.id.txtCantidadT);
-                double cantidad = Double.parseDouble(tempVal.getText().toString());
+                double cantidad = obtenerCantidadValidada((EditText) tempVal);
 
                 double resp = miObj.convertir5(0, de, a, cantidad);
                 Toast.makeText(getApplicationContext(), "Respuesta: " + resp, Toast.LENGTH_LONG).show();
+                textViewResultado.setText("El resultado es: " + resp);
             }
         });
+    }
+    private double obtenerCantidadValidada(EditText editText) {
+        String cantidadString = editText.getText().toString().trim();
+        if (cantidadString.isEmpty()) {
+            Toast.makeText(getApplicationContext(), "Por favor ingresa una cantidad", Toast.LENGTH_LONG).show();
+            return 0;
+        }
+        return Double.parseDouble(cantidadString);
     }
 }
 class conversores{
